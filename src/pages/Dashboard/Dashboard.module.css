@@ -1,0 +1,10 @@
+.dashboard {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: start; /* ВАЖНО! */
+  width: 80%;
+  padding: 20px;
+  background-color: #282c34;
+  border-radius: 10px;
+}

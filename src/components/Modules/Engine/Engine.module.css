@@ -1,0 +1,18 @@
+.module {
+  background-color: #444;
+  border-radius: 8px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.large {
+  min-height: 200px;
+}
+
+.medium {
+  min-height: 150px;
+}
+
+.small {
+  min-height: 100px;
+}
