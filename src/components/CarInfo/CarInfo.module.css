@@ -7,8 +7,10 @@
   background-color: var(--background-color);
   transition: 0.3s;
   width: 100%; /* Растягивание внутри grid */
-  
- 
+}
+
+.divider {
+  border-color: #adada5;
 }
 
 .long {
@@ -28,7 +30,7 @@
 }
 
 .carInfoList {
-  columns: 2;
+  columns: 3;
   gap: 20px;
   padding: 0;
   list-style: none;
