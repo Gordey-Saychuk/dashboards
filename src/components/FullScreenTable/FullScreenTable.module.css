@@ -1,0 +1,129 @@
+/* Основные стили таблицы */
+.tableWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1f2936;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.tableContainer {
+  flex: 1;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Стили для ячеек */
+th, td {
+  padding: 10px;
+  text-align: center; /* Выравниваем текст по центру */
+  border-bottom: 1px solid #000000;
+  position: relative;
+}
+
+/* Заголовок таблицы */
+th {
+  background-color: #28313e;
+  height: 40px;
+  padding: 5px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Разделители между столбцами */
+th::after {
+  content: '|'; /* Вертикальная палочка */
+  position: absolute;
+  top: 10;
+  left: 100%; /* Размещаем по центру */
+  transform: translateX(-50%);
+  height: 80%;
+  color: var(--primary-colors);
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Убираем последнюю палочку в строках */
+th:last-child::after,
+td:last-child::after {
+  content: '';
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .tableWrapper {
+    padding: 10px;
+  }
+
+  .closeButton {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .tableContainer {
+    padding: 5px;
+  }
+
+  /* Скрываем таблицу в обычном виде */
+  .table {
+    display: none;
+  }
+
+  /* Для мобильных устройств отображаем строки как карточки */
+  .row {
+    display: block;
+    margin-bottom: 10px;
+    background-color: #2d3a47;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .row th {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .row td {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #333;
+  }
+
+  .row td:last-child {
+    border-bottom: none;
+  }
+
+  /* Дополнительно для удобства выведем заголовки перед каждым значением */
+  .row td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}

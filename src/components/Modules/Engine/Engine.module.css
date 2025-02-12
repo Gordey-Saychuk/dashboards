@@ -8,7 +8,23 @@
   min-height: 310px;
 }
 
+.long {
+  min-height: 620px;
+  grid-row: 2 / 4;
+}
+  
 
+.seven{
+  min-height: 310px;
+  grid-row:  2; 
+  grid-column: span 1;
+}
+
+.sevens{
+  min-height: 310px;
+  grid-row:  2; 
+  grid-column: span 1;
+}
 
 .small {
   min-height: 150px;
@@ -19,11 +35,65 @@
   grid-column: span 2; /* Большой блок занимает две колонки */
 }
 
+.mediums {
+  min-height: 310px; 
+  grid-row: 3; /* Большой блок занимает две колонки */
+  grid-column: span 2; 
+  grid-column:  3 / 5; 
+} 
 
-@media (max-width: 768px) {
-
-
-  .medium {
-    grid-column: span 1;
+@media (max-width: 1310px) { 
+  .sevens{
+ 
+    grid-row:  3; 
+  
   }
+
+  .mediums {
+   
+    grid-row: 4; /* Большой блок занимает две колонки */
+   
+  } 
+
+  .mediums {
+    min-height: 310px; 
+    grid-row: 1; 
+    grid-column:  3; 
+  } 
+
+  
+}
+
+@media (max-width: 960px) { 
+  .seven{
+    grid-row: 5; 
+  }
+  .mediums {
+    grid-column:  2; 
+    grid-row: 5; /* Большой блок занимает две колонки */
+   
+  } 
+
+  .sevens{
+ 
+    grid-column:  1; 
+    grid-row: 6; /* Большой блок занимает две колонки */
+  }
+}
+
+@media (max-width: 768px) { 
+
+  .seven, .medium, .mediums, .small, .large, .long {
+    grid-column: 1;
+  }
+
+ .seven{
+  grid-row: 7;
+ }
+
+ .mediums{
+  grid-row: 8;
+ }
+
+
 }
