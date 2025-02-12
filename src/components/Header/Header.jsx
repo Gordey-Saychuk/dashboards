@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import dotsNineIcon from '../../assets/dots_nine_icon.svg';
-import FullScreenTable from '../FullScreenTable/FullScreenTable';
+// import FullScreenTable from '../FullScreenTable/FullScreenTable';
 import { useState, useEffect } from "react";
    
 function Header() { 
