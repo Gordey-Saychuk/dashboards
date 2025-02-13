@@ -2,6 +2,7 @@ import styles from "./Header.module.css";
 import dotsNineIcon from '../../assets/dots_nine_icon.svg';
 // import FullScreenTable from '../FullScreenTable/FullScreenTable';
 import { useState, useEffect } from "react";
+import FullScreenTable from "../FullScreenTable/FullScreenTable";
    
 function Header() { 
   const [isTableVisible, setIsTableVisible] = useState(false);
@@ -52,7 +53,7 @@ function Header() {
         
         </div>
         {isTableVisible && (
-          <FullScreenTable 
+          <FullScreenTable  
             rowData={rowData}
             columnDefs={columnDefs}
             onClose={toggleTable} // Закрытие таблицы
