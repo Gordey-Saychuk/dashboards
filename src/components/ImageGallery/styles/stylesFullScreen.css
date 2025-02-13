@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+    background-color: #151515;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 320px;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .long {
+    min-height: 620px;
+    grid-row: 2 / 4;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .long {
+      grid-column: 1;
+      grid-row: 5;
+    
+    }
+  }
+  
+  /* Шапка */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  
+  .arrowButton {
+    background: #222;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  
+    &:hover {
+      background: #e0e0e0;
+      color: #151515;
+    }
+  }
+  
+  /* Прогресс */
+  .progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  
+  .hours {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .divider {
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background:  #ffffff33;
+  }
+  
+  .totalHours {
+    font-size: 1rem;
+  }
+  
+  /* Галерея */
+  .gallerySection {
+    height: 430px;
+  
+    .title {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+  }
+  
+  .gallery {
+    display: grid;
+    max-height: 91%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    overflow-x: auto;
+    overflow-x: hidden;
+  
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  
+  /* Полноэкранный режим */
+  .fullscreen {
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    border-radius: 0;
+    padding: 0;
+  }
+  
+  /* Полноэкранный режим: стили галереи */
+  .fullscreen .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    height: 80vh;
+    gap: 10px;
+  }
+  
+  .fullscreen .gallerySection {
+    height: 80vh;
+  
+    .title {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      padding-left: 6%;
+    }
+  }
+  
+  .fullscreen img {
+    width: 20rem;
+  }
+  
+  .fullscreen .divider {
+    width: 76%;
+  }
+  
+  .fullscreen .progress {
+    width: 70%;
+  }
+  
+  .fullscreen .header {
+    width: 70%;
+    padding: 15px;
+  }

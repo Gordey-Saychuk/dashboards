@@ -2,6 +2,8 @@ import Module from "../../components/Modules/Engine/Engine";
 import Header from "../../components/Header/Header";
 import styles from "./Dashboard.module.css";
 import CarInfo from "../../components/CarInfo/CarInfo";
+import ImageGallery from "../../components/ImageGallery/ImageGallery";
+
 import { useEffect, useState } from "react";
 import FullScreenTable from "../../components/FullScreenTable/FullScreenTable";
 
@@ -69,10 +71,9 @@ function Dashboard() {
 <Module className="medium" />
         <CarInfo className="long" ></CarInfo>
 
-<Module className="long" />
- 
-
 {/* <Module className="long" /> */}
+ 
+<ImageGallery className="long" />
  
 <Module className="seven" />  
 
