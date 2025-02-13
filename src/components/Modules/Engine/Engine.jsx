@@ -4,5 +4,5 @@ function Module({ className }) {
   return <div className={`${styles.module} ${styles[className]}`}></div>;
 }
 
-
+ 
 export default Module;
