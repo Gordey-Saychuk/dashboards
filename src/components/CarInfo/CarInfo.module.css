@@ -1,6 +1,12 @@
-.car-info {
-  min-height: 200px;
- 
+.carInfo {
+  position: relative;
+}
+
+.downloadButtonWrapper {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
 }
 
 .module {
@@ -18,10 +24,7 @@
   grid-row: 2 / 4;
 }
   
-.carInfo{
-  padding: 20px;
-  margin: auto;
-}
+
 
 .carImage {
   width: 100%;
@@ -29,21 +32,38 @@
   object-fit: cover;
 }
 
+.carInfo{
+  padding: 20px;
+  margin: auto;
+  height: 100%;
+}
+
 .carInfoList {
-  columns: 3;
-  gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
   padding: 0;
   list-style: none;
   counter-reset: list-counter;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 260px;
+  
 }
 
 .carListItem {
   padding: 5px;
   display: flex;
   gap: 10px;
+  align-items: center;
   counter-increment: list-counter;
   font-size: 14px;
   break-inside: avoid;
+}
+
+.carListItem span {
+
 }
 
 .carListItem::before {
@@ -59,13 +79,18 @@
   font-weight: bold;
 }
 
+.document{
+  max-width: 40px;
+ 
+}
+
 @media screen and (max-width: 768px) {
   .carImage {
     height: 200px;
   }
 
   .carInfoList {
-    columns: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .long {
@@ -74,4 +99,12 @@
     grid-row: 5;
   
   }
+
+  .carInfoList {
+
+  
+    max-height: 300px;
+    
+  }
 }
+

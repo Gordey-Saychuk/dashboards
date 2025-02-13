@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTable } from 'react-table';
 import { useTransition, animated } from 'react-spring';
-import styles from './FullScreenTable.module.css';
+import styles from './FullScreenTable.module.css'; 
 
 const FullScreenTable = ({ rowData, columnDefs, onClose }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({

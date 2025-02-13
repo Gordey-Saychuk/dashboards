@@ -21,10 +21,20 @@
   margin-right: 50px;
 }
 
-.tickerse{
+.tickerse {
   display: flex;
   gap: 30px;
+  flex: 1; /* Позволяет занять всю доступную ширину */
+  justify-content: flex-start; /* Прижимаем к левому краю */
 }
+
+.searchContainer {
+  display: flex;
+  justify-content: flex-end; /* Прижимаем к правому краю */
+  flex: 1;
+  margin-right: 50px;
+}
+
 
 .ticker {
  
@@ -95,6 +105,9 @@
     margin: 0px;
   }
 
+  .searchContainer {
+    margin: 0px;
+  }
   
   
   .left, .center, .right {

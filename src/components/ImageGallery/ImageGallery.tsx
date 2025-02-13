@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import { FiArrowUpRight, FiX } from "react-icons/fi";
 import { styles, stylesModal } from "./styles/index";
-import {
-  coupe,
-  sedan,
-  suv,
-  sports,
-  pickup,
-  hatchback,
-  minivan,
-} from "../../../public/imageCars/index";
+// import {
+//   coupe,
+//   sedan,
+//   suv,
+//   sports,
+//   pickup,
+//   hatchback,
+//   minivan,
+// } from "../../../public/imageCars/index";
+import coupe from "../../../public/imageCars/1920-02_tcm-3173-1834873.jpg__1582289253__55999.webp";
+import sedan from "../../../public/imageCars/2024_03_10_samie_dorogie_avto_v_mire-_13_.jpg";
+import suv from "../../../public/imageCars/756129720103196.jpg";
+import sports from "../../../public/imageCars/orig.webp";
+import pickup from "../../../public/imageCars/otnyud-ne-bmw-top-10-samykh-dorogikh-mashin-mira-v-2022-godu-3-min.jpg";
+import hatchback from "../../../public/imageCars/images.jfif";
+import minivan from "../../../public/imageCars/2024_03_10_samie_dorogie_avto_v_mire-_5_.jpg";
+
 const ImageGallery = ({ className, imageCars }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   console.log(isFullScreen);
 
-  imageCars = [sedan, suv, coupe, sports, pickup, hatchback, minivan];
+  imageCars = [sedan, coupe, suv, sports, pickup, hatchback, minivan];
   const handleImageClick = (index: any) => {
     setSelectedImage(index);
   };

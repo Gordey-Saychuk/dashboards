@@ -49,7 +49,9 @@ function Header({ toggleTable, isTableVisible }) {
           </div>   */}
           </>
       )}
-          <SearchInput />
+         <div className={styles.searchContainer}>
+  <SearchInput />
+</div>
 
           <div className={styles.right}>
             <div className={styles.avatar}></div>

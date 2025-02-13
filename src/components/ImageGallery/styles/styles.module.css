@@ -89,7 +89,7 @@
   display: grid;
   max-height: 91%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 8px;
   overflow-x: auto;
   overflow-x: hidden;
 
@@ -97,7 +97,7 @@
     width: 100%;
     aspect-ratio: 1;
     transition: transform 0.3s ease;
-
+    object-fit: cover ;
     &:hover {
       transform: scale(1.05);
     }
