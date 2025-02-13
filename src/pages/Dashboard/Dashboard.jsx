@@ -18,12 +18,12 @@ function Dashboard() {
       
 <Module className="large" />
 
-<Module className="medium" /> 
+<Module className="medium" />
+        <CarInfo className="long" ></CarInfo>
 
 <Module className="long" />
  
-<CarInfo className="long" ></CarInfo>
- 
+
 {/* <Module className="long" /> */}
  
 <Module className="seven" />  

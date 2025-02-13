@@ -25,8 +25,9 @@ const CarInfo = ({ className, carType }) => {
     <div className={`${styles.module} ${styles[className]}`}>
       <div className={styles.carInfo}>
       <img className={styles.carImage} src={carImage} alt={carType} />
+        <hr className={styles.divider}/>
       <div className={styles.carInfoWrapper}>
-        <h2 className={styles.carInfoTitle}>Car Information</h2>
+        <h2 className={styles.carInfoTitle}>Сomplete set of the car</h2>
         <ol className={styles.carInfoList}>
           <li className={styles.carListItem}>
             <span>Make: Tesla</span>
