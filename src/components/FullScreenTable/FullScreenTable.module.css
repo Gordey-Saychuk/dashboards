@@ -1,14 +1,12 @@
 /* Основные стили таблицы */
 .tableWrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100vh;
-  width: 100vw;
+
   background-color: #1f2936;
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  /* padding: 0 !important; */
 }
 
 .closeButton {
@@ -35,12 +33,13 @@
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  table-layout: auto; /* Устанавливаем автоматическое растяжение */
 }
 
 /* Стили для ячеек */
 th, td {
   padding: 10px;
-  text-align: center; /* Выравниваем текст по центру */
+  text-align: center;
   border-bottom: 1px solid #000000;
   position: relative;
 }
@@ -57,10 +56,10 @@ th {
 
 /* Разделители между столбцами */
 th::after {
-  content: '|'; /* Вертикальная палочка */
+  content: '|';
   position: absolute;
   top: 10;
-  left: 100%; /* Размещаем по центру */
+  left: 100%;
   transform: translateX(-50%);
   height: 80%;
   color: var(--primary-colors);
@@ -89,41 +88,10 @@ td:last-child::after {
     padding: 5px;
   }
 
-  /* Скрываем таблицу в обычном виде */
+  /* Горизонтальная прокрутка на маленьких экранах */
   .table {
-    display: none;
-  }
-
-  /* Для мобильных устройств отображаем строки как карточки */
-  .row {
     display: block;
-    margin-bottom: 10px;
-    background-color: #2d3a47;
-    padding: 15px;
-    border-radius: 5px;
-  }
-
-  .row th {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .row td {
-    display: block;
-    text-align: left;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #333;
-  }
-
-  .row td:last-child {
-    border-bottom: none;
-  }
-
-  /* Дополнительно для удобства выведем заголовки перед каждым значением */
-  .row td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    margin-bottom: 5px;
+    width: max-content; /* Сделаем таблицу широкой, чтобы прокрутка появилась */
+    overflow-x: auto; /* Горизонтальная прокрутка */
   }
 }

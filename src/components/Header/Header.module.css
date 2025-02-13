@@ -73,7 +73,15 @@
   height: 100px;
 }
 
-/* Адаптивность */
+.center.hidden,
+.right.hidden,
+.tickerse.hidden,
+.avatar.hidden,
+.username.hidden,
+.time.hidden {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .header {
     flex-direction: column;
@@ -86,6 +94,8 @@
   .menuIcon {
     margin: 0px;
   }
+
+  
   
   .left, .center, .right {
     flex-wrap: wrap;

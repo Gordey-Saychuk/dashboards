@@ -18,9 +18,8 @@ const FullScreenTable = ({ rowData, columnDefs, onClose }) => {
 
   return (
     <div className={styles.tableWrapper}>
-      <button className={styles.closeButton} onClick={onClose}>Закрыть</button>
       <div className={styles.tableContainer}>
-        {/* Обычная таблица для десктопа */}
+        {/* Обычная таблица для всех экранов с горизонтальной прокруткой на мобильных */}
         <table {...getTableProps()} className={styles.table}>
           <thead>
             {headerGroups.map(headerGroup => (
@@ -44,24 +43,9 @@ const FullScreenTable = ({ rowData, columnDefs, onClose }) => {
             })}
           </tbody>
         </table>
-
-        {/* Отображение строк как карточек на мобильных устройствах */}
-        {rows.map(row => {
-          prepareRow(row);
-          return (
-            <div key={row.id} className="row">
-              {row.cells.map(cell => (
-                <div key={cell.column.id} className="row-item" data-label={cell.column.Header}>
-                  {cell.render('Cell')}
-                </div>
-              ))}
-            </div>
-          );
-        })}
       </div>
     </div>
   );
 };
 
 export default FullScreenTable;
- 
