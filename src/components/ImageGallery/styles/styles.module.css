@@ -117,6 +117,7 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  padding: 0px !important;
 }
 
 /* Полноэкранный режим: стили галереи */
@@ -152,7 +153,7 @@
 }
 
 .fullscreen .header {
-  width: 70%;
-  padding: 15px;
+  width: 90%;
+  padding: 0px;
 }
 

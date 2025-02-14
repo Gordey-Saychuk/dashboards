@@ -24,7 +24,7 @@ const ImageGallery = ({ className, imageCars }) => {
   console.log(isFullScreen);
 
   imageCars = [sedan, coupe, suv, sports, pickup, hatchback, minivan];
-  const handleImageClick = (index: any) => {
+  const handleImageClick = (index) => { 
     setSelectedImage(index);
   };
 
@@ -41,7 +41,8 @@ const ImageGallery = ({ className, imageCars }) => {
       >
         {/* Шапка */}
         <header className={styles.header}>
-          <span>MJ FAST HOURS</span>
+          {isFullScreen ? <span className={styles.totalHours}>DAS32432F2323DS</span> : <span>MJ FAST HOURS</span>}
+          
           <button
             className={styles.arrowButton}
             onClick={() => setIsFullScreen(!isFullScreen)}
@@ -52,14 +53,17 @@ const ImageGallery = ({ className, imageCars }) => {
 
         {/* Прогресс */}
         <div className={styles.progress}>
-          <span className={styles.hours}>6.9</span>
-          <span className={styles.totalHours}>15H</span>
+        {isFullScreen ? '' : <span className={styles.hours}>6.9</span>}
+        {isFullScreen ?  ''  : <span className={styles.totalHours}>15H</span>}
+      
         </div>
-        <span className={styles.divider}></span>
+
+        {isFullScreen ? '' :         <span className={styles.divider}></span>}
 
         {/* Галерея */}
         <div className={styles.gallerySection}>
-          <p className={styles.title}>LATEST WORKS</p>
+        {isFullScreen ? '' :  <p className={styles.title}>LATEST WORKS</p>}
+         
           <div className={styles.gallery}>
             {imageCars.map((src, index) => (
               <img

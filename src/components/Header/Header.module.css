@@ -7,6 +7,7 @@
   color: var(--text-color);
   font-size: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
 }
 
 .left, .center, .right {
@@ -14,11 +15,14 @@
   align-items: center;
   gap: 30px;
 }
+.left{
+  width: 84px;
+}
 
 .menuIcon {
   width: 50px;
   cursor: pointer;
-  margin-right: 50px;
+ 
 }
 
 .tickerse {
@@ -32,7 +36,7 @@
   display: flex;
   justify-content: flex-end; /* Прижимаем к правому краю */
   flex: 1;
-  margin-right: 50px;
+  
 }
 
 
@@ -53,7 +57,7 @@
 
 .right {
   display: flex;
-  
+  margin-left: 50px;
   align-items: center;
   gap: 10px;
 }
@@ -92,30 +96,45 @@
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .header {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    gap: 10px;
-  
-  }
-  
-  .menuIcon {
-    margin: 0px;
+    padding: 15px 10px;
+    gap: 20px;
   }
 
-  .searchContainer {
-    margin: 0px;
+  .menuIcon {
+    order: 0;
+    margin: 0;
   }
+
   
-  
-  .left, .center, .right {
-    flex-wrap: wrap;
+
+  .searchContainer {
+    order: 1;
+    flex: 1;
+    display: flex;
     justify-content: center;
   }
 
-  .menuIcon {
-    order: -1;
+  .right {
+    order: 2;
+    margin: 0;
   }
+
+  .tickerse {
+    order: 3;
+    width: 100% !important;
+    display: flex; 
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  
+
 }
+
