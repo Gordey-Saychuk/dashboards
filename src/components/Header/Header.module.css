@@ -16,12 +16,18 @@
   gap: 30px;
 }
 .left{
-  width: 84px;
+
+  display: flex;
+      margin-right: 50px;
+      align-items: center;
 }
 
 .menuIcon {
   width: 50px;
   cursor: pointer;
+  display: flex;
+      
+  align-items: center;
  
 }
 
@@ -36,7 +42,7 @@
   display: flex;
   justify-content: flex-end; /* Прижимаем к правому краю */
   flex: 1;
-  
+  width: 100% !important;
 }
 
 
@@ -104,6 +110,13 @@
     align-items: center;
     padding: 15px 10px;
     gap: 20px;
+  }
+
+  .left{
+
+    
+        margin-right: 0px;
+   
   }
 
   .menuIcon {

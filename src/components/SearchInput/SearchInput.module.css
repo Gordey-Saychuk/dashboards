@@ -14,7 +14,7 @@
   font-size: 14px;
   outline: none;
   transition: all 0.3s ease-in-out;
-
+ 
 }
 
 .searchInput::placeholder {
@@ -35,9 +35,23 @@
   
   }
 
+
+  @media screen and (max-width: 760px) {
+    .searchInput{
+    
+      width: 100% ;
+      min-width: 100px;
+    }
+
+    .searchContainer{
+      width: 100%;
+    }
+  }
+
 @media screen and (max-width: 451px) {
 .searchInput{
   width: 150px;
+  width: 100% !important;
 }
 
 

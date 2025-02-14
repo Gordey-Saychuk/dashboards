@@ -52,7 +52,7 @@
   counter-reset: list-counter;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 260px;
+  max-height: 300px;
   
 }
 
@@ -129,3 +129,13 @@
   }
 }
 
+
+@media screen and (max-width: 400px) {
+
+  .carInfoList {
+
+  
+    max-height: 260px;
+    
+  }
+}
