@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+
+
+.container {
+  height: 95%;
+
+  background: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.long {
+  height: 630px;
+  grid-row: 2 / 4;
+}
+
+@media screen and (max-width: 768px) {
+  .long {
+    grid-column: 1;
+    grid-row: 4;
+  
+  }
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.arrowButton {
+  background: #222;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  &:hover {
+    background: #e0e0e0;
+    color: #151515;
+  }
+}
+
+/* Прогресс */
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.hours {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.divider {
+  display: flex;
+  width: 100%;
+  height: 2px;
+  background:  #ffffff33;
+  margin-bottom: 20px;
+}
+
+.totalHours {
+  font-size: 1rem;
+}
+
+/* Галерея */
+.gallerySection {
+  
+
+  .title {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+}
+
+.gallery {
+  display: grid;
+  max-height: 91%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  overflow-x: auto;
+  overflow-x: hidden;
+
+  img {
+    width: 100%;
+    max-height: 150px;
+    /* aspect-ratio: 1; */
+    transition: transform 0.3s ease;
+    object-fit: cover ;
+  
+  }
+}
+
+/* Полноэкранный режим */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 0px !important;
+  
+}
+
+/* Полноэкранный режим: стили галереи */
+.fullscreen .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.fullscreen .gallerySection {
+  height: 100vh;
+
+  .title {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    padding-left: 6%;
+  }
+}
+
+.fullscreen img {
+  width: 20rem;
+  aspect-ratio: 0;
+}
+
+.fullscreen .divider {
+  width: 76%;
+}
+
+.fullscreen .progress {
+  width: 70%;
+}
+
+.fullscreen .header {
+  width: 90%;
+  padding: 0px;
+}
+
+
+@media screen and (max-width: 652px) {
+
+  .fullscreen img {
+    width: 90%;
+  }
+}
+
+
+
+
+
+.fullscreen .header {
+  width: 90%;
+  padding: 1rem;
+  background: #111; /* Можно поменять цвет фона */
+  position: sticky; /* Чтобы фиксировалась вверху */
+  top: 0;
+  z-index: 10;
+}
+
+.fullscreen .gallery img {
+  max-height: none; /* Убирает ограничение */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.module {
+  max-height: 630px; /* Ограничение высоты */
+  overflow: hidden; /* Обрезка контента, если он выходит за пределы */
+}
+
+.carInfo {
+  position: relative;
+  background-color: #1a1a1a;
+  
+}
+
+.downloadButtonWrapper {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+ 
+}
+
+.carInfoTitle{
+  font-size: 0.9rem;
+}
+
+.arrowButton {
+  background: #222;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  &:hover {
+    background: #e0e0e0;
+    color: #151515;
+  }
+}
+
+.module {
+  background-color: var(--background-color);
+  transition: 0.3s;
+  width: 100%; /* Растягивание внутри grid */
+}
+
+.downloadButton{
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  border-color: #adada5;
+}
+
+
+  
+
+
+.carImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carInfo{
+  padding: 20px;
+  margin: auto;
+  height: 100%;
+}
+
+.carInfoList {
+
+ 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 0;
+  list-style: none;
+  counter-reset: list-counter;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 220px !important;
+  
+}
+
+.carListIteme{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 0;
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+
+
+.carListItem {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  counter-increment: list-counter;
+  font-size: 14px;
+  break-inside: avoid;
+}
+
+.carListItem span {
+
+}
+
+
+
+.medium {
+  max-height: 310px !important;
+  grid-column: span 2; /* Большой блок занимает две колонки */
+}
+
+
+.carListItem::before {
+  content: counter(list-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+  background-color: white;
+  color: #282c34;
+  font-weight: bold;
+  padding: 3px;
+}
+
+.document{
+  max-width: 20px;
+ 
+}
+
+
+
+@media screen and (max-width: 2600px) {
+  .carImage {
+    height: 200px;
+  }
+
+}
+
+@media screen and (max-width: 1900px) {
+  .carImage {
+    height: 170px;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .carImage {
+    height: 200px;
+  }
+  .medium {
+    grid-column: 1;
+  }
+
+ 
+
+  .carInfoList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .carInfoList {
+
+  
+    max-height: 300px;
+    
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+
+  .carInfoList {
+
+  
+    max-height: 260px;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -54,11 +54,14 @@ function Header({ toggleTable, isTableVisible }) {
 </div>
 
           <div className={styles.right}>
+             <a href="/auth" >
             <div className={styles.avatar}></div>
+            </a>
             <div className={styles.rightInfo}> 
               <span className={styles.username}>Quan</span>
               <span className={styles.time}>14:15</span>
             </div>
+            
           </div> 
         </>
 

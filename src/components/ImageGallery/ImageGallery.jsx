@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiArrowUpRight, FiX } from "react-icons/fi";
 import { styles, stylesModal } from "./styles/index";
 // import {
@@ -23,6 +23,18 @@ const ImageGallery = ({ className, imageCars }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   console.log(isFullScreen);
 
+  useEffect(() => {
+    if (isFullScreen) {
+      document.body.style.overflow = "hidden"; // Запрещаем прокрутку
+    } else {
+      document.body.style.overflow = ""; // Восстанавливаем прокрутку
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // Очистка эффекта при размонтировании
+    };
+  }, [isFullScreen]);
+
   imageCars = [sedan, coupe, suv, sports, pickup, hatchback, minivan];
   const handleImageClick = (index) => { 
     setSelectedImage(index);
@@ -36,12 +48,12 @@ const ImageGallery = ({ className, imageCars }) => {
     <div className={`${styles.module} ${styles[className]}`}>
       <div
         className={`${styles.container} ${
-          isFullScreen ? styles.fullscreen : ""
+          isFullScreen ? styles.fullscreen : "" 
         }`}
       >
         {/* Шапка */}
         <header className={styles.header}>
-          {isFullScreen ? <span className={styles.totalHours}>DAS32432F2323DS</span> : <span>MJ FAST HOURS</span>}
+          {isFullScreen ? <span className={styles.totalHours}>VIN: DAS32432F23</span> : <span>MJ FAST HOURS</span>}
           
           <button
             className={styles.arrowButton}
@@ -49,7 +61,7 @@ const ImageGallery = ({ className, imageCars }) => {
           >
             {isFullScreen ? <FiX size={20} /> : <FiArrowUpRight size={20} />}
           </button>
-        </header>
+        </header> 
 
         {/* Прогресс */}
         <div className={styles.progress}>

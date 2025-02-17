@@ -2,8 +2,9 @@ import React from 'react';
 import { useTable } from 'react-table';
 import { useTransition, animated } from 'react-spring';
 import styles from './FullScreenTable.module.css'; 
+import Pagination from '../Pagination/Pagination';
 
-const FullScreenTable = ({ rowData, columnDefs, onClose }) => {
+const FullScreenTable = ({ rowData, columnDefs }) => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
     columns: columnDefs,
     data: rowData,
@@ -43,6 +44,7 @@ const FullScreenTable = ({ rowData, columnDefs, onClose }) => {
             })}
           </tbody>
         </table>
+      
       </div>
     </div>
   );

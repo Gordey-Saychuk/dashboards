@@ -48,20 +48,13 @@
   border: none;
   width: 20px;
   height: 20px;
-  display: flex
-;
-    justify-content: center;
-    align-items: center;
 }
 
 .divider {
   border-color: #adada5;
 }
 
-.long {
-  height: 630px;
-  grid-row: 2 / 4;
-}
+
   
 
 
@@ -79,7 +72,7 @@
 
 .carInfoList {
 
-  display: grid;
+ 
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
   padding: 0;
@@ -87,8 +80,17 @@
   counter-reset: list-counter;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 350px;
+  max-height: 220px !important;
   
+}
+
+.carListIteme{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 0;
+  list-style: none;
+  counter-reset: list-counter;
 }
 
 
@@ -103,17 +105,17 @@
   break-inside: avoid;
 }
 
-
-.divider {
-  display: flex;
-  width: 100%;
-  height: 2px;
-  background:  #ffffff33;
-}
-
 .carListItem span {
 
 }
+
+
+
+.medium {
+  max-height: 310px !important;
+  grid-column: span 2; /* Большой блок занимает две колонки */
+}
+
 
 .carListItem::before {
   content: counter(list-counter);
@@ -150,21 +152,22 @@
 
 }
 
+
+
+
 @media screen and (max-width: 768px) {
   .carImage {
     height: 200px;
   }
+  .medium {
+    grid-column: 1;
+  }
+
 
   .carInfoList {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .long {
-    
-    grid-column: 1;
-    grid-row: 5;
-  
-  }
 
   .carInfoList {
 
@@ -184,3 +187,14 @@
     
   }
 }
+
+
+
+
+
+
+
+
+
+
+
