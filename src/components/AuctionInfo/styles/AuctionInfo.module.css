@@ -163,6 +163,7 @@
     grid-column: 1;
   }
 
+  
 
   .carInfoList {
     grid-template-columns: repeat(1, 1fr);
