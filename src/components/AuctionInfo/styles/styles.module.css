@@ -98,7 +98,9 @@
     aspect-ratio: 1;
     transition: transform 0.3s ease;
     object-fit: cover ;
-  
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 
@@ -124,7 +126,7 @@
   display: grid; /* Оставляем грид */
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Можно увеличить размер */
   gap: 15px;
-  min-height: 91% !important;
+  min-height: 98% !important;
 }
 
 
@@ -174,7 +176,7 @@
 }
 
 .fullscreen .gallery img {
-  max-height: none; /* Убирает ограничение */
+  max-height: none; 
 }
 
 
