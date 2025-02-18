@@ -87,7 +87,7 @@
 
 .gallery {
   display: grid;
-  height: 600px;
+  max-height: 490px;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   overflow-x: auto;
@@ -124,7 +124,7 @@
   display: grid; /* Оставляем грид */
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Можно увеличить размер */
   gap: 15px;
-  height: 91% !important;
+  min-height: 91% !important;
 }
 
 
@@ -276,7 +276,8 @@
 }
 
 .carInfoTitle{
-  font-size: 0.9rem;
+  font-size: 1.3rem;
+  height: 64px;
 }
 
 .arrowButton {
@@ -446,7 +447,11 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-
+  .carInfoTitle{
+    font-size: 0.9rem;
+    height: 64px;
+  }
+  
   
 }
 
