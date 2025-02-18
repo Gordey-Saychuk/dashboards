@@ -47,6 +47,7 @@
   align-items: center;
   font-size: 0.8rem;
   text-transform: uppercase;
+
 }
 
 .arrowButton {
@@ -138,7 +139,7 @@
   }
 }
 .fullscreen img {
- 
+  height: 400px !important;
   aspect-ratio: 0;
 }
 
@@ -153,6 +154,7 @@
 .fullscreen .header {
   width: 90%;
   padding: 0px;
+  margin-top: 20px;
 }
 
 

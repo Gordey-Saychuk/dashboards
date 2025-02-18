@@ -56,9 +56,9 @@ const AuctionInfo = ({ className }) => {
   return (
     <div className={`${styles.module} ${styles[className]}`}>
       <div className={styles.carInfo}>
-      <p className={styles.carInfoTitle}>VIN: 5UX53DP09R9U65586 / Модель: 2024 BMW X3, Xdrive30I / Пробег: 999,999 миль</p>
+      <p className={styles.carInfoTitle}>VIN: 5UX53DP09R9U65586 / Модель: 2024 BMW X3, Xdrive30I </p>
       {isFullScreen ? '' :         <span className={styles.divider}></span>}
-        <p className={styles.carInfoTitle}>AUCTION INFO</p>
+        <p className={styles.carInfoTitles}>AUCTION INFO</p>
         <div className={styles.carInfoList}>
 
           <div className={styles.carListIteme}>
@@ -66,6 +66,8 @@ const AuctionInfo = ({ className }) => {
   <li className={styles.carListItem}><span>Primary Damage: Front end</span></li>
   <li className={styles.carListItem}><span>Secondary Damage: None</span></li>
   <li className={styles.carListItem}><span>Odometer (km): Not specified</span></li>
+  <li className={styles.carListItem}><span>Mileage: 999,999 miles</span></li>
+  
   <li className={styles.carListItem}><span>Loss: Not specified</span></li>
   <li className={styles.carListItem}><span>ACV: $58,994</span></li>
   <li className={styles.carListItem}><span>ERC: $52,656</span></li>
@@ -139,6 +141,7 @@ const AuctionInfo = ({ className }) => {
           <div className={stylesModal.modalContent} onClick={(e) => e.stopPropagation()}>
 
             <img
+            
   src={imageCars[selectedImage].image_url}
   alt={`Work ${selectedImage + 1}`}
 />

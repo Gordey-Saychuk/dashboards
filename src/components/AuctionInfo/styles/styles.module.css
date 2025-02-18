@@ -87,7 +87,7 @@
 
 .gallery {
   display: grid;
-  max-height: 490px;
+  max-height: 295px;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   overflow-x: auto;
@@ -126,14 +126,16 @@
   display: grid; /* Оставляем грид */
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Можно увеличить размер */
   gap: 15px;
-  min-height: 98% !important;
+ 
+  min-height: calc(100% - 25px) !important;
+
 }
 
 
 
 .fullscreen .gallerySection {
   height: 100vh;
-  width: 95% ;
+  width: calc(100% - 40px);
   .title {
     font-size: 0.9rem;
     margin-bottom: 8px;
@@ -142,9 +144,18 @@
 }
 
 .fullscreen img {
-  
+  height: 400px ;
   aspect-ratio: 0;
 }
+
+.modalContent img {
+  height: none !important;
+  max-width: 90vw; /* Чтобы не выходило за границы экрана */
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+
 
 .fullscreen .divider {
   width: 76%;
@@ -154,10 +165,7 @@
   width: 70%;
 }
 
-.fullscreen .header {
-  width: 90%;
-  padding: 0px;
-}
+
 
 
 
@@ -167,13 +175,20 @@
 
 
 .fullscreen .header {
-  width: 95%;
-  padding: 1rem;
+  width: calc(100% - 40px);
+
+  margin: 0;
+  padding: 20px !important;
   background: #111; /* Можно поменять цвет фона */
   position: sticky; /* Чтобы фиксировалась вверху */
   top: 0;
   z-index: 10;
+  
 }
+
+
+
+
 
 .fullscreen .gallery img {
   max-height: none; 
@@ -280,6 +295,11 @@
 .carInfoTitle{
   font-size: 1.3rem;
   height: 64px;
+  margin: 0;
+}
+
+.carInfoTitles{
+  font-size: 0.9rem;
 }
 
 .arrowButton {
@@ -330,6 +350,7 @@
   padding: 20px;
   margin: auto;
   height: 100%;
+  overflow: hidden !important;
 }
 
 .carInfoList {
@@ -343,7 +364,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   /* max-height: 220px !important; */
-  max-height: 110px;
+  max-height: 400px;
   
 }
 
@@ -456,17 +477,4 @@
   
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

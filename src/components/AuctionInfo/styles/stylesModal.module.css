@@ -12,6 +12,8 @@
   z-index: 1000;
 }
 
+
+
 .modalContent {
   position: relative;
   max-width: 90%;
@@ -20,7 +22,11 @@
   img {
  
     width: 100%;
-  
+    height: auto !important;
+    max-height: 90vh;
+    width: auto;
+    max-width: 90vw;
+    object-fit: contain;
     border-radius: 10px;
   }
 }

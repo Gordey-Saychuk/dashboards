@@ -20,7 +20,11 @@
   img {
  
     width: 100%;
-  
+    height: auto !important;
+    max-height: 90vh;
+    width: auto;
+    max-width: 90vw;
+    object-fit: contain;
     border-radius: 10px;
   }
 }

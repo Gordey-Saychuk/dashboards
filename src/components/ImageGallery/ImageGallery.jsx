@@ -64,11 +64,13 @@ const ImageGallery = ({ className, imageCars }) => {
         </header> 
 
         {/* Прогресс */}
-        <div className={styles.progress}>
+
+        {isFullScreen ? '' : <div className={styles.progress}>
         {isFullScreen ? '' : <span className={styles.hours}>6.9</span>}
         {isFullScreen ?  ''  : <span className={styles.totalHours}>15H</span>}
       
-        </div>
+        </div>}
+        
 
         {isFullScreen ? '' :         <span className={styles.divider}></span>}
 
