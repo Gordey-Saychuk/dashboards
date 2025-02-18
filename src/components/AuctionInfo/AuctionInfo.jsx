@@ -10,7 +10,7 @@ import hatchback from "../../../public/imageCars/images.jfif";
 import minivan from "../../../public/imageCars/2024_03_10_samie_dorogie_avto_v_mire-_5_.jpg";
 
 
-
+ 
 const AuctionInfo = ({ className }) => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -56,71 +56,42 @@ const AuctionInfo = ({ className }) => {
   return (
     <div className={`${styles.module} ${styles[className]}`}>
       <div className={styles.carInfo}>
-
+      <p className={styles.carInfoTitle}>VIN: 5UX53DP09R9U65586 / Модель: 2024 BMW X3, Xdrive30I / Пробег: 999,999 миль</p>
       {isFullScreen ? '' :         <span className={styles.divider}></span>}
         <p className={styles.carInfoTitle}>AUCTION INFO</p>
         <div className={styles.carInfoList}>
 
           <div className={styles.carListIteme}>
-          <li className={styles.carListItem}>
-  <span>VIN: 5UX53DP09R9U65586</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Модель: 2024 BMW X3, Xdrive30I</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Основное повреждение: Front end</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Дополнительное повреждение: Отсутствует</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Пробег: 999,999 миль</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Пробег (км): ~1,609,344 км (предположительно)</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Тип потери: Не указан</span>
-</li>
-<li className={styles.carListItem}>
-  <span>ACV (Оценочная стоимость): $58,994</span>
-</li>
-<li className={styles.carListItem}>
-  <span>ERC (Оценка восстановления): $52,656</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Кузов: Внедорожник</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Цвет: Белый</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Двигатель: 2.0L, 4 цилиндра, 248 л.с.</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Трансмиссия: Автоматическая</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Тип топлива: Бензин</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Привод: Полный</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Аукцион: Copart (06.09.2024) — Продано</span>
-</li>
-<li className={styles.carListItem}>
-  <span>Аукцион: Copart (23.09.2024) — Пробег 30,618 миль, Продано</span>
-</li>
+          
+  <li className={styles.carListItem}><span>Primary Damage: Front end</span></li>
+  <li className={styles.carListItem}><span>Secondary Damage: None</span></li>
+  <li className={styles.carListItem}><span>Odometer (km): Not specified</span></li>
+  <li className={styles.carListItem}><span>Loss: Not specified</span></li>
+  <li className={styles.carListItem}><span>ACV: $58,994</span></li>
+  <li className={styles.carListItem}><span>ERC: $52,656</span></li>
+  <li className={styles.carListItem}><span>Body Style: Not specified</span></li>
+  <li className={styles.carListItem}><span>Exterior Color: White</span></li>
+  <li className={styles.carListItem}><span>Engine: 2.0L, 4 cyl., 248HP</span></li>
+  <li className={styles.carListItem}><span>Transmission: Automatic</span></li>
+  <li className={styles.carListItem}><span>Fuel Type: Gasoline</span></li>
+  <li className={styles.carListItem}><span>Drive Type: All wheel drive</span></li>
+  
+  <li className={styles.carListItem}><span>Auction: Copart</span></li>
+  <li className={styles.carListItem}><span>Auction Date: 2024-09-06</span></li>
+  <li className={styles.carListItem}><span>Odometer: Not specified</span></li>
+  <li className={styles.carListItem}><span>Odometer Unit: Not specified</span></li>
+  <li className={styles.carListItem}><span>Price: Not specified</span></li>
+  <li className={styles.carListItem}><span>Status: Sold</span></li>
+
+  <li className={styles.carListItem}><span>Auction: Copart</span></li>
+  <li className={styles.carListItem}><span>Auction Date: 2024-09-23</span></li>
+  <li className={styles.carListItem}><span>Odometer: 30,618 mi</span></li>
+  <li className={styles.carListItem}><span>Price: Not specified</span></li>
+  <li className={styles.carListItem}><span>Status: Sold</span></li>
 
             </div>
 
-
-
-
-
-
+        </div>
         <div
         className={`${styles.container} ${
           isFullScreen ? styles.fullscreen : "" 
@@ -149,7 +120,7 @@ const AuctionInfo = ({ className }) => {
          
         <div className={styles.gallery}>
   {imageCars
-    .slice(0, isFullScreen ? imageCars.length : 3)
+    // .slice(0, isFullScreen ? imageCars.length : 6)
     .map((src, index) => (
       <img
         key={index}
@@ -165,11 +136,13 @@ const AuctionInfo = ({ className }) => {
         {/* Модальное окно */}
         {selectedImage !== null && (
           <div className={stylesModal.modalOverlay} onClick={closeModal}>
-            <div className={stylesModal.modalContent}>
-              <img
-                src={imageCars[selectedImage]}
-                alt={`Work ${selectedImage + 1}`}
-              />
+          <div className={stylesModal.modalContent} onClick={(e) => e.stopPropagation()}>
+
+            <img
+  src={imageCars[selectedImage].image_url}
+  alt={`Work ${selectedImage + 1}`}
+/>
+
               <button className={stylesModal.closeButton} onClick={closeModal}>
                 <FiX size={24} />
               </button>
@@ -177,10 +150,6 @@ const AuctionInfo = ({ className }) => {
           </div>
         )}
       </div>
-
-
-        </div>
-      
 
         
       </div>

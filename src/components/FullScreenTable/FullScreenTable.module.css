@@ -26,7 +26,8 @@
 
 .tableContainer {
   flex-grow: 1; /* Это позволит контейнеру расти, но не превышать доступную высоту */
-  max-height: 100vh;
+  max-height: calc(100vh - 60px);
+
   overflow: auto;
   
 }
@@ -79,22 +80,6 @@ td:last-child::after {
 
 
 
-
-@media (max-width: 768px) {
-.tableContainer {
-
-  padding-bottom: 80px ;
-  
-}
-}
-
-@media (max-width: 400px) {
-  .tableContainer {
-  
-    padding-bottom: 120px ;
-    
-  }
-  }
 
 /* 
 @media (max-width: 768px) {

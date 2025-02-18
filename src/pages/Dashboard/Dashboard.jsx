@@ -73,7 +73,7 @@ function Dashboard() {
 
              <Pagination
          totalItems={totalItems}
-         itemsPerPage={itemsPerPage}
+         itemsPerPage={itemsPerPage} 
          onPageChange={handlePageChange}
        />
      </>
@@ -97,11 +97,11 @@ function Dashboard() {
    
   <ImageGallery className="long" />
    
-  <Module className="seven" />  
+  {/* <Module className="seven" />  
   
   <Module className="sevens" />     
    
-  <Module className="mediums" />  
+  <Module className="mediums" />   */}
   
       </div>
       }

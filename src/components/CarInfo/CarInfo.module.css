@@ -1,12 +1,12 @@
 .module {
-  max-height: 630px; /* Ограничение высоты */
+  height: 630px !important;
   overflow: hidden; /* Обрезка контента, если он выходит за пределы */
 }
 
 .carInfo {
   position: relative;
   background-color: #1a1a1a;
-  
+  height: 630px !important;
 }
 
 .downloadButtonWrapper {
@@ -60,14 +60,14 @@
 
 .long {
   height: 630px;
-  grid-row: 2 / 4;
+  grid-row: 2 / 3;
 }
   
 
 
 .carImage {
   width: 100%;
-  height: 250px;
+  height: 250px !important;
   object-fit: cover;
 }
 
@@ -87,7 +87,7 @@
   counter-reset: list-counter;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 350px;
+  max-height: 280px;
   
 }
 
@@ -136,24 +136,11 @@
 
 
 
-@media screen and (max-width: 2600px) {
-  .carImage {
-    height: 200px;
-  }
 
-}
 
-@media screen and (max-width: 1900px) {
-  .carImage {
-    height: 170px;
-  }
-
-}
 
 @media screen and (max-width: 768px) {
-  .carImage {
-    height: 200px;
-  }
+
 
   .carInfoList {
     grid-template-columns: repeat(1, 1fr);
@@ -166,16 +153,11 @@
   
   }
 
-  .carInfoList {
-
   
-    max-height: 300px;
-    
-  }
 }
 
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
 
   .carInfoList {
 
@@ -183,4 +165,4 @@
     max-height: 260px;
     
   }
-}
+} */

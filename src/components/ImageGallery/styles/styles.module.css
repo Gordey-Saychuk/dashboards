@@ -1,9 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 
 
+.gallery {
+  display: grid;
+  max-height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  overflow-x: auto;
+  overflow-x: hidden;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1;
+    transition: transform 0.3s ease;
+    object-fit: cover ;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }}
 
 .container {
-  height: 95%;
+  height: 590px;
   padding: 20px;
   background: #1a1a1a;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -12,7 +29,7 @@
 
 .long {
   height: 630px;
-  grid-row: 2 / 4;
+  grid-row: 2 / 3;
 }
 
 @media screen and (max-width: 768px) {
@@ -85,24 +102,6 @@
   }
 }
 
-.gallery {
-  display: grid;
-  max-height: 91%;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  overflow-x: auto;
-  overflow-x: hidden;
-
-  img {
-    width: 100%;
-    aspect-ratio: 1;
-    transition: transform 0.3s ease;
-    object-fit: cover ;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-}
 
 /* Полноэкранный режим */
 .fullscreen {
@@ -126,7 +125,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  max-height: 91% !important;
   gap: 10px;
 }
 

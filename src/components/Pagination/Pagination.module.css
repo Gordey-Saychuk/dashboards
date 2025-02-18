@@ -4,8 +4,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 
+
+  
+  /* Закрепляем пагинацию внизу страницы */
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: var(--secondary-color); /* или другой цвет для фона, чтобы отделить от контента */
+  padding: 10px 0; /* Добавляем отступы */
+  z-index: 1000; /* Чтобы он был поверх других элементов */
 }
 
 .pageButton {
@@ -24,8 +34,6 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
-
-
 
 .pageInfo {
   font-size: 16px;
